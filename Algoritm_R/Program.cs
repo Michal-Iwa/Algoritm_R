@@ -13,7 +13,7 @@ namespace Algoritm_R
         static void Main(string[] args)
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            Problem p = new Problem(1, 10000000);
+            Problem p = new Problem(1, 1000);
             p.RandomElements();
             //Problem p = new Problem();
             //p.Read_tasks_from_file();
