@@ -12,14 +12,14 @@ namespace Algoritm_R
     {
         static void Main(string[] args)
         {
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-            Problem p = new Problem(1, 1000);
+            Problem p = new Problem(1, 50);
             p.RandomElements();
             //Problem p = new Problem();
             //p.Read_tasks_from_file();
+            long start = Stopwatch.GetTimestamp();
             p.ScheduleTasks(p.listoftasks);
-            string elapsedMs = watch.ElapsedMilliseconds.ToString();
-            Debug.WriteLine("Program obliczal przez " + elapsedMs as string + " milisekund ");
+            long end = Stopwatch.GetTimestamp();
+            Debug.WriteLine("Program obliczal przez " + (end-start) as string + " ticków ");
             long memory = GC.GetTotalMemory(true);
             Debug.WriteLine("Program zajal " + memory as string + " bajtow pamieci ");
             //foreach (Task i in p.listoftasks)
